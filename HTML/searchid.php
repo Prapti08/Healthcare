@@ -70,7 +70,7 @@ body{
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="user.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="doctor.php">Home <span class="sr-only">(current)</span></a>
       </li> 
       <form class="form-inline" method="post" name="form1">
           <input name="search" class="form-control mr-sm-2"  placeholder="Enter ID" required="">
@@ -94,43 +94,37 @@ if(mysqli_num_rows($q)==0)
 }
   else
   {
-    echo "<table class='table table-bordered table-hover' >";
-  echo "<tr style='background-color: #20F3C9 ; text-color:black;'>";
-//   echo "<tr style='text-color:black ;'>";
-    //Table header
-    echo "<th>"; echo "ID";	echo "</th>";
-				echo "<th>"; echo "Name";  echo "</th>";
-				echo "<th>"; echo "Height";  echo "</th>";
-				echo "<th>"; echo "Weight";  echo "</th>";
-				echo "<th>"; echo "Bloodgroup";  echo "</th>";
-				echo "<th>"; echo "Gender";  echo "</th>";
-                echo "<th>"; echo "DOB";  echo "</th>";
-                echo "<th>"; echo "Allergies";  echo "</th>";
-                echo "<th>"; echo "Email-ID";  echo "</th>";
-                echo "<th>";echo "Reports";echo"</th>";
-  echo "</tr>";
-  
+   
   while($row=mysqli_fetch_assoc($q))
   {
-    
-    echo "<tr>";
-				echo "<td >"; echo $row['id']; echo "</td>";
-				echo "<td>"; echo $row['name']; echo "</td>";
-				echo "<td>"; echo $row['height']; echo "</td>";
-				echo "<td>"; echo $row['weight']; echo "</td>";
-				echo "<td>"; echo $row['bloodgroup']; echo "</td>";
-				echo "<td>"; echo $row['gender']; echo "</td>";
-                echo "<td>"; echo $row['dob']; echo "</td>";
-                echo "<td>"; echo $row['allergies']; echo "</td>";
-                echo "<td>"; echo $row['email']; echo "</td>";
 ?>
+ <div class="card" style="width: 20rem;">
+ 
+ 
+ 
+ <ul class="list-group list-group-flush">
+   <li class="list-group-item"> Patient Id- <?php echo $row['id'];?></li>
+   <li class="list-group-item"> Name <?php echo $row['name']; ?></li>
+   <li class="list-group-item"> Height -  <?php echo $row['height']; ?></li>
+   <li class="list-group-item"> Weight -  <?php echo $row['weight']; ?></li>
+   <li class="list-group-item"> Bloodgroup -  <?php echo $row['bloodgroup']; ?></li>
+   <li class="list-group-item"> Gender -  <?php echo $row['gender']; ?></li>
+   <li class="list-group-item"> DOB -  <?php echo $row['dob']; ?></li>
+   <li class="list-group-item"> Allergies -  <?php echo $row['allergies']; ?></li>
+   <li class="list-group-item"> Email-Id -  <?php echo $row['email']; ?></li>
+   <li class="list-group-item"> Reports -  <a href="upload/<?php echo $row['reports'] ?>"><?php echo $row['reports'] ?></a></li>
+   
+   
+ </ul>
+ 
+</div>
                 
-<td><a href="upload/<?php echo $row['reports'] ?>"><?php echo $row['reports'] ?></a></td>
+
 <?php	
 }
 }
 }
-echo  $_SESSION['doctorid'];
+
 ?>
 
 
