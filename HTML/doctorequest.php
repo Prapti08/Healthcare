@@ -70,7 +70,7 @@ body{
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="user.php">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="doctor.php">Home <span class="sr-only">(current)</span></a>
       </li> 
       <form class="form-inline" method="post" name="form1" action="searchid.php">
           <input name="search" class="form-control mr-sm-2"  placeholder="Enter ID" required="">

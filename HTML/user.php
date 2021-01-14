@@ -130,7 +130,7 @@ table, th, td {
             <img class="img-responsive" src="../images/car6.jpg" style="opacity: 1;" width="100%"; height="500px";  id="logo"/>
             <nav class="navbar navbar-dark bg-dark" style="height: 100px; text-align: center;  margin-bottom: 100px;">
                 <a class="navbar-brand">Navbar</a>
-                <a href="patientrequest.html"class="btn btn-primary" style="margin-right:500px;">Book appointment</a>
+                <a href="patientrequest.php"class="btn btn-primary" style="margin-right:500px;">Book appointment</a>
 
                 <div class="srch">
                 <form    class="navbar-form" method="post" name="form1">
